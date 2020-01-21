@@ -1,0 +1,13 @@
+<EmberTable style="max-width: 400px" as |t|>
+    <t.head @columns={{this.visibleColumns}} />
+    <t.body @rows={{this.rows}} />
+</EmberTable>
+<br><br>
+<div>
+    <button {{on "click" this.panColumnsLeft}}>
+        Pan Left
+    </button>
+    <button {{on "click" this.panColumnsRight}}>
+        Pan Right
+    </button>
+</div>
