@@ -1,13 +1,10 @@
 <EmberTable style="max-width: 400px" as |t|>
-    <t.head @columns={{this.visibleColumns}} />
+    <t.head @columns={{if this.displayAltColumns this.columnsAlt this.columns}} />
     <t.body @rows={{this.rows}} />
 </EmberTable>
 <br><br>
 <div>
-    <button {{on "click" this.panColumnsLeft}}>
-        Pan Left
-    </button>
-    <button {{on "click" this.panColumnsRight}}>
-        Pan Right
+    <button {{on "click" this.changeDisplay}}>
+        Change Display
     </button>
 </div>
